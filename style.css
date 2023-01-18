@@ -183,10 +183,11 @@ hr {
 
 @media only screen and (min-width: 1024px) {
   .main-container {
-    margin: 8vh 0;
+    margin: 11.8vh 0;
   }
   .container {
     width: 25vw;
+
     border-radius: 25px;
     background-color: var(--card-bg);
     padding: 2%;
