@@ -1,0 +1,239 @@
+:root {
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+}
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 18px;
+  background-color: var(--main-bg);
+  max-height: 100vh;
+  font-family: "Outfit", sans-serif;
+}
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-img-container {
+  position: relative;
+}
+
+.main-img {
+  vertical-align: top;
+  max-width: 100%;
+  backface-visibility: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: opacity 0.4s ease-in-out;
+  z-index: 1;
+  opacity: 0;
+  cursor: pointer;
+  background-color: var(--cyan);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+}
+.view:hover {
+  opacity: 0.8;
+}
+.main-img-container:hover .overlay {
+  opacity: 1;
+}
+.main-img-container:hover .main-img {
+  opacity: 0.5;
+}
+.heading {
+  color: var(--White);
+  font-weight: 500;
+}
+.heading:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+.description {
+  color: var(--soft-blue);
+  font-weight: 300;
+  line-height: 1.6;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.col-1,
+.col-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.col-1 p {
+  color: var(--cyan);
+}
+.col-2 p {
+  color: var(--soft-blue);
+}
+hr {
+  border-color: var(--line);
+}
+.row-2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.profile-container img {
+  width: 100%;
+  height: auto;
+}
+.row-2 p {
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+.row-2 p .creator:hover {
+  color: var(--cyan);
+  cursor: pointer;
+}
+.attribution {
+  height: 5vh;
+  background: var(--line);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--White);
+}
+.attribution a {
+  color: var(--soft-blue);
+  text-decoration: none;
+}
+.attribution a:hover {
+  color: var(--cyan);
+}
+@media only screen and (max-width: 767px) {
+  .main-container {
+    margin: 5vh 0;
+  }
+  .container {
+    width: 80vw;
+    border-radius: 25px;
+    background-color: var(--card-bg);
+    padding: 7%;
+  }
+  .main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .heading {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .description {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .row {
+    margin-bottom: 1.5rem;
+  }
+  .col-1 img {
+    width: 15px;
+    height: auto;
+  }
+  .col-2 img {
+    width: 22px;
+    height: 22px;
+  }
+  .col-1 p,
+  .col-2 p {
+    font-size: 1rem;
+    margin-left: 0.3rem;
+  }
+  hr {
+    margin-bottom: 1rem;
+  }
+  .profile-container {
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+  .row-2 p {
+    font-size: 1rem;
+  }
+  .attribution {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .main-container {
+    margin: 8vh 0;
+  }
+  .container {
+    width: 25vw;
+    border-radius: 25px;
+    background-color: var(--card-bg);
+    padding: 2%;
+  }
+  .main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  .heading {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+  }
+  .description {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+  }
+  .row {
+    margin-bottom: 1.5rem;
+  }
+  .col-1 img {
+    width: 15px;
+    height: auto;
+  }
+  .col-2 img {
+    width: 22px;
+    height: 22px;
+  }
+  .col-1 p,
+  .col-2 p {
+    font-size: 1rem;
+    margin-left: 0.3rem;
+  }
+  hr {
+    margin-bottom: 1rem;
+  }
+  .profile-container {
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+  }
+  .row-2 p {
+    font-size: 1rem;
+  }
+  .attribution {
+    font-size: 16px;
+  }
+}
